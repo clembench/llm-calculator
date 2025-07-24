@@ -97,6 +97,9 @@ def merge_data():
     # Convert registry_data to DataFrame for easier merging
     registry_df = pd.DataFrame(registry_data)
     
+    # drop the entry with the name 'slurk'
+    registry_df = registry_df[registry_df['model_name'] != 'slurk']
+
     # Extract license info
     registry_df['license_name'] = registry_df['license'].apply(lambda x: x['name'])
     registry_df['license_url'] = registry_df['license'].apply(lambda x: x['url'])
