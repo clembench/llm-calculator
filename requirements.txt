@@ -1,5 +1,6 @@
 pandas==2.2.3
 gradio_rangeslider==0.0.7
 gradio==4.44.1
+huggingface_hub<0.24.0
 pycountry==24.6.1
 apscheduler==3.10.4
